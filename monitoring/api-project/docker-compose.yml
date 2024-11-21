@@ -5,6 +5,12 @@ services:
     ports:
       - 8080:8080
 
+  node_exporter:
+    container_name: node_exporter
+    image: prom/node-exporter:latest
+    ports:
+      - 9100:9100
+
   prometheus:
     container_name: prometheus
     image: prom/prometheus:v2.34.0
